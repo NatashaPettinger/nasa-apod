@@ -693,6 +693,7 @@ input[type="date"] {
     min-height: 100vh;
     width: 100%;
     background: repeat-y top/100% url('../../images/guillaume-le-louarn-uC21aXJ7yQs-unsplash.jpg') fixed ;
+    justify-content: space-between;
 }
     #wrapper{
         display: flex;
@@ -745,7 +746,6 @@ input[type="date"] {
             display: flex;
             flex-flow: row wrap;
             padding: .5rem 0;
-            align-self: flex-end;
         }
             .socials {
                 display: flex;
