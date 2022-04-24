@@ -1,31 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+
+<html>
 	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
-
-		<title>Astronomy picture of the day</title>
-
-		<!-- external CSS link -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Rubik+Moonrocks&display=swap" rel="stylesheet"> 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<title>Bighorn Astronomy Association</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Bighorn Astronomy Association Picture of the Day, built with NASA API integration">
+		<meta name="keywords" content="NASA APOD Astronomy">
+		<link rel="icon" href="images/nasalogo.png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body>
+	<body class="is-preload">
 
-		<h1 id="NASA">NASA's Astronomy Picture of the Day</h1>
-		<h3>Choose a date:</h3>
-		<input type="date" name="" placeholder="XXXX-XX-XX" value="">
-		<button type="button" name="button">Get Picture</button>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
 
-		<h2 id="name"></h2>
-		<img id="dailyImage" src="" alt="">
-		<h4 id="description"></h4>
-		<p id="explanation"></p>
+				<!-- Title, Search & Image Wrapper -->
+					<div id="wrapper">
+							<section id="main" class="split" >
+								<div >
+									<h1 class="major">Bighorn Astronomy
+									Association</h1>
+									<h2>Picture of the Day</h2>
+									<p>built with NASA API integration</p>
+									<ul class="actions">
+										<li><form method="get" action="#">
+											<div class="fields">
+												<div class="field quarter">
+													<input type="date" name="date" id="date" />
+												</div>
+												<div class="field quarter">
+													<a href="#dailyImage">
+													<input id="fetchMedia" type="button" value="Get Media" class="button primary" />
+													</a>
+												</div>
+										</form></li>
+									</ul>
+								</div>
+							</section>
 
-		<script type="text/javascript" src="js/main.js"></script>
+							<section class="split">
+								<div class="image" id="dailyImage" >
+								</div>
+							</section>
+					</div>
+				<!-- Description, Title & Date Placeholder-->
+					<section id="first" class="content">
+					</section>
+					<!-- Copyright & Contact Wrapper-->
+					<div id="footerWrapper">
+						<div class="socials">
+							<ul class="contact-icons icons color1">
+								<a href="https://www.linkedin.com/in/natasha-pettinger/"><li class="icon brands fa-linkedin"></li></a>
+								<a href="https://github.com/NatashaPettinger"><li class="icon brands fa-github"></li></a>
+								<a href="#"><li class="icon solid fa-download"></li></a>
+								<a href="mailto:natasha.pettinger@gmail.com"><li class="icon solid fa-envelope"></li></a>
+							</ul>
+						</div>
+						<div class="copyright">
+							<a href="https://natasha-pettinger.netlify.app">&copy; NatPett Digital, LLC</a>. Background photo by <a href="https://unsplash.com/@xanswer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Guillaume Le Louarn</a> on <a href="https://unsplash.com/images/nature/space?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/api.js"></script>
+
 	</body>
 </html>
