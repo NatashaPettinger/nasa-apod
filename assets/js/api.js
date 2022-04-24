@@ -8,25 +8,16 @@ function getFetch(){
   const url = `https://api.nasa.gov/planetary/apod?api_key=xscfmAcuf70UUhLmXX4qCea9CWa3qjnvCpT151Si${date}`
 
   let first = document.getElementById('first')
+  let dailyImage = document.getElementById('dailyImage')
 
   if (document.getElementById('description')) {
-    first.removeChild(first.firstChild);
-  }
-  if (document.getElementById('back')) {
-    first.removeChild(first.firstChild);
-  }
-
-  let dailyImage = document.getElementById('dailyImage')
-  while (document.getElementById('description')) {
-    document.getElementByClass('description').removeAttributeNode();
+    first.removeChild(document.getElementById('description'));
   }
 
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
         console.log(data)
-
-        first.classList = 'panel spotlight medium left'
 
         let apod = document.createElement('div');
         apod.id = "description"
@@ -46,7 +37,6 @@ function getFetch(){
           copy.id = 'copy';
           copy.innerHTML = `&copy; ${data.copyright}`
           dailyImage.appendChild(copy);
-          document.getElementsByTagName('iframe')
         }
 
 
